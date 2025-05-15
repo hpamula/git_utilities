@@ -1,1 +1,1 @@
-# git_utilities
+Usage: ./create.sh <repository_name> <username> <password>
