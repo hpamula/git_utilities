@@ -2,12 +2,12 @@
 set -e
 REPOSITORY_NAME="$1"
 USERNAME="$2"
-PASSWORD="$3"
-if [ -z "$REPOSITORY_NAME" ] || [ -z "$USERNAME" ] || [ -z "$PASSWORD" ]; then
-  echo "Usage: $0 <repository_name> <username> <password>"
+TOKEN="$3"
+if [ -z "$REPOSITORY_NAME" ] || [ -z "$USERNAME" ] || [ -z "$TOKEN" ]; then
+  echo "Usage: $0 <repository_name> <username> <token>"
   exit 1
 fi
-REMOTE_URL="https://${USERNAME}:${PASSWORD}@github.com/${USERNAME}/${REPOSITORY_NAME}.git"
+REMOTE_URL="https://${USERNAME}:${TOKEN}@github.com/${USERNAME}/${REPOSITORY_NAME}.git"
 mkdir "$REPOSITORY_NAME"
 cd "$REPOSITORY_NAME"
 echo "# ${REPOSITORY_NAME}" >> README.md
