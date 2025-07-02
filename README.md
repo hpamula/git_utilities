@@ -1,3 +1,3 @@
 After creating empty repository on GitHub:
 
-`./create.sh <repository_name> <username> <password>`
+`./create.sh <repository_name> <username> <token>`
